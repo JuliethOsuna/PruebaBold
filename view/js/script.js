@@ -32,7 +32,7 @@ Weather.prototype.updateSuggestions = function() {
     const suggestion = document.createElement('div');
     suggestion.classList.add('suggestionItem');
     suggestion.appendChild(document.createTextNode('No results'));
-    suggestion.style.color='red';
+    suggestion.style.color="rgb(255, 0, 0)";
     this.$suggestions.appendChild(suggestion);
 
   }
