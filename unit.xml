@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="25.481" tests="12" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-12-26T17:20:49" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Weather app 
+" timestamp="2019-12-26T17:20:49" tests="12" file="/Users/rakhetan/Documents/weather/weather-hr-answer/test/test.js" failures="0" time="25.481">
+    <testcase name="Weather app 
+ should suggest items on typing city name" time="1.986" classname="should suggest items on typing city name">
+    </testcase>
+    <testcase name="Weather app 
+ selecting a suggestion should change the input field value to the selected city&apos;s name" time="1.839" classname="selecting a suggestion should change the input field value to the selected city&apos;s name">
+    </testcase>
+    <testcase name="Weather app 
+ should add the contents to the selected section on selecting an option" time="1.796" classname="should add the contents to the selected section on selecting an option">
+    </testcase>
+    <testcase name="Weather app 
+ should debounce before making API calls - no result found" time="5.073" classname="should debounce before making API calls - no result found">
+    </testcase>
+    <testcase name="Weather app 
+ should debounce before making API calls - result should have final call results" time="2.044" classname="should debounce before making API calls - result should have final call results">
+    </testcase>
+    <testcase name="Weather app 
+ should show &quot;No results&quot; message if the data is empty" time="1.842" classname="should show &quot;No results&quot; message if the data is empty">
+    </testcase>
+    <testcase name="Weather app 
+ should show &quot;No results&quot; message in red color" time="1.89" classname="should show &quot;No results&quot; message in red color">
+    </testcase>
+    <testcase name="Weather app 
+ should have a reset button which resets all entries" time="1.832" classname="should have a reset button which resets all entries">
+    </testcase>
+    <testcase name="Weather app 
+ make sure api is hit - test 1" time="1.803" classname="make sure api is hit - test 1">
+    </testcase>
+    <testcase name="Weather app 
+ make sure api is hit - test 2" time="1.773" classname="make sure api is hit - test 2">
+    </testcase>
+    <testcase name="Weather app 
+ make sure api is hit - test 3" time="1.869" classname="make sure api is hit - test 3">
+    </testcase>
+    <testcase name="Weather app 
+ make sure api is hit - test 4" time="1.734" classname="make sure api is hit - test 4">
+    </testcase>
+  </testsuite>
+</testsuites>
