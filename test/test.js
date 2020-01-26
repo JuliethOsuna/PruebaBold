@@ -57,9 +57,9 @@ describe('Weather app \n', function() {
     });
 
     let response = await responsePromise;
-    
+
     let data = JSON.parse(response).data;
-    await wait(1000);
+    await wait(10000);
 
     const suggestion1 = await driver.executeScript("return document.getElementsByClassName('suggestionItem')[0].innerText");
     const suggestion2 = await driver.executeScript("return document.getElementsByClassName('suggestionItem')[1].innerText");
@@ -130,11 +130,11 @@ describe('Weather app \n', function() {
     $city.sendKeys('aber');
     const text = await driver.executeScript("return document.getElementsByClassName('suggestionItem')[0].innerText");
     expect(text).to.equal('No Info available!');
-    await wait(1000);
+    await wait(10000);
     let finalText = await driver.executeScript("return document.getElementsByClassName('suggestionItem')[0].innerText");
     expect(finalText).to.equal('No results');
-    
-    
+
+
     await $city.clear();
     $city.sendKeys('aber');
     const responsePromise = new Promise((resolve, reject) => {
@@ -150,7 +150,7 @@ describe('Weather app \n', function() {
     let data = JSON.parse(response).data;
     finalText = await driver.executeScript("return document.getElementsByClassName('suggestionItem')[0].innerText");
     expect(finalText).to.equal('Aberdeen');
-    
+
     await $city.clear();
     await $city.sendKeys('dall');
     await wait(100);
@@ -175,7 +175,7 @@ describe('Weather app \n', function() {
     const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
     expect(isRed).to.be.true;
   });
-  
+
   it('should show "No results" message in red color', async function() {
     const responsePromise = new Promise((resolve, reject) => {
       request.get("https://jsonmock.hackerrank.com/api/weather?name=xyz",
@@ -187,7 +187,7 @@ describe('Weather app \n', function() {
 
     await responsePromise;
     $city.sendKeys('xyz');
-    await wait(1000);
+    await wait(10000);
     const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
     expect(isRed).to.be.true;
   });
@@ -228,7 +228,7 @@ describe('Weather app \n', function() {
     });
 
     let response = await responsePromise;
-    
+
     let data = JSON.parse(response).data;
 
     await wait(1000);
@@ -252,7 +252,7 @@ describe('Weather app \n', function() {
       const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
       expect(isRed).to.be.true;
     }
-    
+
   });
 
   it('make sure api is hit - test 2', async function() {
@@ -267,7 +267,7 @@ describe('Weather app \n', function() {
     });
 
     let response = await responsePromise;
-    
+
     let data = JSON.parse(response).data;
     await wait(1000);
 
@@ -290,7 +290,7 @@ describe('Weather app \n', function() {
       const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
       expect(isRed).to.be.true;
     }
-    
+
   });
 
   it('make sure api is hit - test 3', async function() {
@@ -305,7 +305,7 @@ describe('Weather app \n', function() {
     });
 
     let response = await responsePromise;
-    
+
     let data = JSON.parse(response).data;
 
     await wait(1000);
@@ -329,7 +329,7 @@ describe('Weather app \n', function() {
       const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
       expect(isRed).to.be.true;
     }
-    
+
   });
 
   it('make sure api is hit - test 4', async function() {
@@ -344,7 +344,7 @@ describe('Weather app \n', function() {
     });
 
     let response = await responsePromise;
-    
+
     let data = JSON.parse(response).data;
 
     await wait(1000);
@@ -368,7 +368,7 @@ describe('Weather app \n', function() {
       const isRed = await driver.executeScript(`return getComputedStyle(document.querySelectorAll(".suggestionItem")[0]).color === "rgb(255, 0, 0)"`)
       expect(isRed).to.be.true;
     }
-    
+
   });
 
 

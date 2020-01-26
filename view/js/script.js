@@ -1,6 +1,4 @@
-function Weather() {
-  this.timeout;
-}
+function Weather() {}
 
 Weather.prototype.fetchResults = function(val) {
   return fetch(`https://jsonmock.hackerrank.com/api/weather?name=${val}`)
@@ -10,25 +8,19 @@ Weather.prototype.fetchResults = function(val) {
 }
 
 Weather.prototype.onKeyup = function(e) {
-  console.log(e.target.value);
+  clearTimeout(this.timer);
 
-  clearTimeout(this.timeout);
-
-  this.timeout = setTimeout(() => {
+  this.timer = setTimeout(() => {
     this.fetchResults(e.target.value).then((res) => {
       this.weatherResults = res.data;
-      this.updateSuggestions();
+      this.updatecitySelect(res.data);
     })
   }, 1000);
 }
 
 Weather.prototype.updatecitySelect = function(results) {
-
-}
-
-Weather.prototype.updateSuggestions = function() {
   this.$suggestions.innerHTML= '';
-  if(!this.weatherResults.length) {
+  if(!results.length) {
     const suggestion = document.createElement('div');
     suggestion.classList.add('suggestionItem');
     suggestion.appendChild(document.createTextNode('No results'));
@@ -40,15 +32,17 @@ Weather.prototype.updateSuggestions = function() {
     const suggestion = document.createElement('div');
     suggestion.classList.add('suggestionItem');
     suggestion.appendChild(document.createTextNode(item.name));
-    suggestion.addEventListener("click", () => {
-      console.log(item)
-      this.$selectedCity.innerHTML = item.name;
-      this.$selctedWeather.innerHTML = item.weather;
-      this.$selectedStatus.innerHTML = item.status;
-      this.$city.value = item.name;
-    })
+    suggestion.addEventListener("click", this.updateSuggestions.bind(this, item))
     this.$suggestions.appendChild(suggestion);
   })
+}
+
+Weather.prototype.updateSuggestions = function(item) {
+  this.$selectedCity.innerHTML = item.name;
+  this.$selctedWeather.innerHTML = item.weather;
+  this.$selectedStatus.innerHTML = item.status;
+  this.$city.value = item.name;
+  this.$suggestions.innerHTML = '';
 }
 
 Weather.prototype.reset = function() {
@@ -57,8 +51,6 @@ Weather.prototype.reset = function() {
   this.$selectedStatus.innerHTML = '';
   this.$city.value= '';
   this.$suggestions.innerHTML= '';
-
-
 }
 
 Weather.prototype.init = function() {

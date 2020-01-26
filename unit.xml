@@ -1,82 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="17.971" tests="12" failures="5">
-  <testsuite name="Root Suite" timestamp="2020-01-25T18:01:01" tests="0" failures="1" time="0">
-    <testcase name=" Uncaught error outside test suite" time="0" classname="Uncaught error outside test suite">
-      <failure message="listen EADDRINUSE 0.0.0.0:8000" type="Error"><![CDATA[Error: listen EADDRINUSE 0.0.0.0:8000
-    at Server.setupListenHandle [as _listen2] (net.js:1360:14)
-    at listenInCluster (net.js:1401:12)
-    at doListen (net.js:1510:7)
-    at _combinedTickCallback (internal/process/next_tick.js:142:11)
-    at process._tickCallback (internal/process/next_tick.js:181:9)
-    at startup (bootstrap_node.js:204:16)
-    at bootstrap_node.js:625:3]]></failure>
-    </testcase>
+<testsuites name="Mocha Tests" time="47.73800000000001" tests="12" failures="1">
+  <testsuite name="Root Suite" timestamp="2020-01-25T19:09:57" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Weather app
-" timestamp="2020-01-25T18:01:01" tests="12" file="/projects/challenge/test/test.js" failures="4" time="17.971">
-    <testcase name="Weather app
- should suggest items on typing city name" time="1.202" classname="should suggest items on typing city name">
-      <failure message="javascript error: Cannot read property &apos;innerText&apos; of undefined
-  (Session info: headless chrome=79.0.3945.130)
-  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Linux 4.15.0-1034-gke x86_64)" type="JavascriptError"><![CDATA[JavascriptError: javascript error: Cannot read property 'innerText' of undefined
-  (Session info: headless chrome=79.0.3945.130)
-  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Linux 4.15.0-1034-gke x86_64)
-    at Object.checkLegacyResponse (node_modules/selenium-webdriver/lib/error.js:546:15)
-    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:509:13)
-    at doSend.then.response (node_modules/selenium-webdriver/lib/http.js:441:30)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:189:7)
-From: Task: WebDriver.executeScript()
-    at thenableWebDriverProxy.schedule (node_modules/selenium-webdriver/lib/webdriver.js:807:17)
-    at thenableWebDriverProxy.executeScript (node_modules/selenium-webdriver/lib/webdriver.js:878:16)
-    at Context.<anonymous> (test/test.js:65:38)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:189:7)]]></failure>
+  <testsuite name="Weather app 
+" timestamp="2020-01-25T19:09:57" tests="12" file="/home/wuwei/Documentos/JULIETH/weather-finder/test/test.js" failures="1" time="47.73800000000001">
+    <testcase name="Weather app 
+ should suggest items on typing city name" time="10.487" classname="should suggest items on typing city name">
     </testcase>
-    <testcase name="Weather app
- selecting a suggestion should change the input field value to the selected city&apos;s name" time="1.132" classname="selecting a suggestion should change the input field value to the selected city&apos;s name">
-      <failure message="expected &apos;dall&apos; to equal &apos;Dallas&apos;" type="AssertionError"><![CDATA[AssertionError: expected 'dall' to equal 'Dallas'
-    at Context.<anonymous> (test/test.js:88:24)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:189:7)]]></failure>
+    <testcase name="Weather app 
+ selecting a suggestion should change the input field value to the selected city&apos;s name" time="1.348" classname="selecting a suggestion should change the input field value to the selected city&apos;s name">
     </testcase>
-    <testcase name="Weather app
- should add the contents to the selected section on selecting an option" time="1.159" classname="should add the contents to the selected section on selecting an option">
+    <testcase name="Weather app 
+ should add the contents to the selected section on selecting an option" time="1.377" classname="should add the contents to the selected section on selecting an option">
     </testcase>
-    <testcase name="Weather app
- should debounce before making API calls - no result found" time="5.131" classname="should debounce before making API calls - no result found">
+    <testcase name="Weather app 
+ should debounce before making API calls - no result found" time="5.08" classname="should debounce before making API calls - no result found">
     </testcase>
-    <testcase name="Weather app
- should debounce before making API calls - result should have final call results" time="1.358" classname="should debounce before making API calls - result should have final call results">
+    <testcase name="Weather app 
+ should debounce before making API calls - result should have final call results" time="10.451" classname="should debounce before making API calls - result should have final call results">
       <failure message="expected &apos;No results&apos; to equal &apos;Aberdeen&apos;" type="AssertionError"><![CDATA[AssertionError: expected 'No results' to equal 'Aberdeen'
     at Context.<anonymous> (test/test.js:152:26)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:189:7)]]></failure>
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]></failure>
     </testcase>
-    <testcase name="Weather app
- should show &quot;No results&quot; message if the data is empty" time="1.173" classname="should show &quot;No results&quot; message if the data is empty">
+    <testcase name="Weather app 
+ should show &quot;No results&quot; message if the data is empty" time="1.567" classname="should show &quot;No results&quot; message if the data is empty">
     </testcase>
-    <testcase name="Weather app
- should show &quot;No results&quot; message in red color" time="1.122" classname="should show &quot;No results&quot; message in red color">
-      <failure message="expected false to be true" type="AssertionError"><![CDATA[AssertionError: expected false to be true
-    at Context.<anonymous> (test/test.js:192:24)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:189:7)]]></failure>
+    <testcase name="Weather app 
+ should show &quot;No results&quot; message in red color" time="10.322" classname="should show &quot;No results&quot; message in red color">
     </testcase>
-    <testcase name="Weather app
- should have a reset button which resets all entries" time="1.183" classname="should have a reset button which resets all entries">
+    <testcase name="Weather app 
+ should have a reset button which resets all entries" time="1.402" classname="should have a reset button which resets all entries">
     </testcase>
-    <testcase name="Weather app
- make sure api is hit - test 1" time="1.113" classname="make sure api is hit - test 1">
+    <testcase name="Weather app 
+ make sure api is hit - test 1" time="1.317" classname="make sure api is hit - test 1">
     </testcase>
-    <testcase name="Weather app
- make sure api is hit - test 2" time="1.124" classname="make sure api is hit - test 2">
+    <testcase name="Weather app 
+ make sure api is hit - test 2" time="1.345" classname="make sure api is hit - test 2">
     </testcase>
-    <testcase name="Weather app
- make sure api is hit - test 3" time="1.12" classname="make sure api is hit - test 3">
+    <testcase name="Weather app 
+ make sure api is hit - test 3" time="1.673" classname="make sure api is hit - test 3">
     </testcase>
-    <testcase name="Weather app
- make sure api is hit - test 4" time="1.154" classname="make sure api is hit - test 4">
+    <testcase name="Weather app 
+ make sure api is hit - test 4" time="1.369" classname="make sure api is hit - test 4">
     </testcase>
   </testsuite>
 </testsuites>
